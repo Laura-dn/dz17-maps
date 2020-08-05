@@ -53,7 +53,6 @@ function getLocation(ip) {
     
     fetch('https://json.geoiplookup.io/').then(resp => resp.json())
         .then(d => {
-            console.log(d);
             myMap.lat = d.latitude;
             myMap.lng = d.longitude;
             myMap.city = d.city;
