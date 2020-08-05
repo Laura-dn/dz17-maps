@@ -51,10 +51,11 @@ function parsingData(str) {
 function getLocation(ip) {
     const url = 'http://ip-api.com/json/' + ip;
     
-    fetch(url).then(resp => resp.json())
+    fetch('https://json.geoiplookup.io/').then(resp => resp.json())
         .then(d => {
-            myMap.lat = d.lat;
-            myMap.lng = d.lon;
+            console.log(d);
+            myMap.lat = d.latitude;
+            myMap.lng = d.longitude;
             myMap.city = d.city;
             
             initMap();
