@@ -67,7 +67,7 @@ function getWeather() {
     fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${myMap.lat}&lon=${myMap.lng}&appid=${apiKey}&units=metric`).
         then((resp) => resp.json()).
         then((result) => {
-            myMap.weather.innerHTML = `${result.name} - ${Math.round(result.main.temp)} &deg;C`;
+            myMap.weather.innerHTML = `${result.name}: ${Math.round(result.main.temp)} &deg;C`;
         });
 }
 
