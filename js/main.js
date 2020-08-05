@@ -49,7 +49,7 @@ function parsingData(str) {
 }
 
 function getLocation(ip) {
-    const url = 'https://ip-api.com/json/' + ip;
+    const url = 'http://ip-api.com/json/' + ip;
     
     fetch(url).then(resp => resp.json())
         .then(d => {
